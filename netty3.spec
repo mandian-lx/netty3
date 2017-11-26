@@ -1,14 +1,15 @@
 %{?_javapackages_macros:%_javapackages_macros}
+
 %global namedreltag .Final
 %global namedversion %{version}%{?namedreltag}
 
 Name:           netty3
 Version:        3.10.6
-Release:        2%{?dist}
+Release:        3.1
 Summary:        An asynchronous event-driven network application framework and tools for Java
 # CC0: src/main/java/org/jboss/netty/handler/codec/base64/Base64.java
+Group:          Development/Java
 License:        ASL 2.0 and BSD and CC0
-Group:		Development/Java
 URL:            http://netty.io/
 Source0:        https://github.com/netty/netty/archive/netty-%{namedversion}.tar.gz
 
@@ -129,6 +130,9 @@ rm -v src/main/java/org/jboss/netty/handler/ssl/JettyNpnSslEngine.java
 %doc LICENSE.txt NOTICE.txt
  
 %changelog
+* Wed Jul 26 2017 Fedora Release Engineering <releng@fedoraproject.org> - 3.10.6-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
+
 * Fri Feb 10 2017 Fedora Release Engineering <releng@fedoraproject.org> - 3.10.6-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 
